@@ -1,0 +1,36 @@
+<% include partials/header %>
+
+<div class="ui link cards container productsIndex">
+    <% products.forEach(function(product){ %>
+        <div class="card">
+            <div class="image">
+                <img src="<%= product.image %>">
+            </div>
+            <div class="content">
+                <div class="header">
+                    <%= product.product %>
+                </div>
+                <div class="meta">
+                    <a>Friends</a>
+                </div>
+                <div class="description">
+                    <%- product.description %>
+                </div>
+            </div>
+            <div class="extra content">
+                <span class="right floated">
+                    <%= product.price %>
+                </span>
+                <span>
+                    <a href="/index/<%= product._id %>">Read More</a>
+                </span>
+            </div>  
+        </div>
+    <% }); %>
+</div>
+
+<h2>Here's a list of the products that you will eventually be able to search through</h2>
+
+
+
+<% include partials/footer %>

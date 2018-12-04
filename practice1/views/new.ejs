@@ -1,0 +1,25 @@
+<% include partials/header %>
+
+<h3 class="newFoodForm__header">See Something We Don't Have?  Add It Here!</h3>
+
+<form class="ui form newFoodForm" action="/index" method="POST">
+    <div class="field">
+        <label>Food Name</label>
+        <input type="text" name="store[product]" placeholder="example: Pizza">
+    </div>
+    <div class="field">
+        <label>Image URL</label>
+        <input type="text" name="store[image]" placeholder="example: https://unsplash.com/23894hup8wuefghi">
+    </div>
+    <div class="field">
+        <label>Food Price</label>
+        <input type="text" name="store[price]" placeholder="6.99">
+    </div>
+    <div class="field">
+        <label>Description (include ingredients please)</label>
+        <textarea name="store[description]" placeholder="This is the best Pizza Ever! It's got cheese with cheese and cheese... ect."></textarea>
+    </div>
+    <button class="ui button teal" type="submit">Submit</button>
+</form>
+
+<% include partials/footer %>

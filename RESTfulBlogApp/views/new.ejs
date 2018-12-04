@@ -1,0 +1,22 @@
+<% include ./partials/header %>
+    <script src="js/medium-editor.js"></script>
+    <div class="ui main text container segment">
+        <div class="ui huge header">New Blog</div>
+    <form class="ui form" action="/blogs" method="POST">
+        <div class="field">
+            <label>Title</label>
+            <input type="text" name="blog[title]" placeholder="title"></input>
+        </div>
+        <div class="field">
+            <label>Image</label>
+            <input type="text" name="blog[image]" placeholder="image url"></input>
+        </div>        
+        <div class="field">
+            <label>Blog Content</label>
+            <textarea class="editable" name="blog[body]"></textarea>
+        </div>
+        <input class="ui teal basic big button" type="submit">
+    </form>
+    </div>
+    <script>var editor = new MediumEditor('.editable');</script>
+<% include ./partials/footer %>

@@ -1,0 +1,17 @@
+.productsIndex{
+    justify-content: space-around;
+}
+
+.extra-content-hr {
+    
+    border-top: solid gray 1px;
+    
+}
+
+.newFoodForm__header {
+    text-align: center;
+}
+
+.newFoodForm {
+    margin: 3rem 20%;
+}

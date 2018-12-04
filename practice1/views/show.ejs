@@ -1,0 +1,14 @@
+<% include partials/header %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header"><%= food.product %></div>
+    <div class="ui"><img src="<%=food.image %>"></div>
+    <p><%- food.description %></p>
+    <p><%= food.price %></p>
+    <a class="ui basic button orange" href="/index/<%= food._id %>/edit">Edit</a>
+    <form action="/index/<%= food._id %>?_method=DELETE" method="POST">
+        <button class="ui red basic button">Delete</button>
+    </form>
+</div>
+
+<% include partials/footer %>
